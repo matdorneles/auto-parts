@@ -2,8 +2,11 @@ import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
 import cors from "cors";
 import { router } from "./routes"
+import { db } from "./database/db";
+import CheckAdminService from "./services/user/CheckAdminService";
 
 const app = express();
+app.use(express.json());
 app.use(cors());
 app.use(router);
 
@@ -23,4 +26,8 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, async () => {
+  await db.sync();
+  CheckAdminService();
+  console.log(`Server running on port ${port}`)
+});
