@@ -11,12 +11,7 @@ class CreateCategoryService {
     }
 
     const category = await CategoryModel.create({
-      data: {
-        name: name
-      }, select: {
-        id: true,
-        name: true
-      }
+      name: name
     });
 
     return category;

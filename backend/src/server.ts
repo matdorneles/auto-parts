@@ -3,7 +3,6 @@ import "express-async-errors";
 import cors from "cors";
 import { router } from "./routes"
 import { db } from "./database/db";
-import CheckAdminService from "./services/user/CheckAdminService";
 
 const app = express();
 app.use(express.json());
@@ -15,12 +14,12 @@ const port = 3333;
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if(err instanceof Error) {
     // If instanceof type Error
-    return res.json(400).json({
+    return res.status(400).json({
       error: err.message,
     });
   }
 
-  return res.json(500).json({
+  return res.status(500).json({
     status: "error",
     message: "Internal server error",
   });
@@ -28,6 +27,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 app.listen(port, async () => {
   await db.sync();
-  CheckAdminService();
   console.log(`Server running on port ${port}`)
 });
