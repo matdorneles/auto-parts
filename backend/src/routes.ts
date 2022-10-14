@@ -8,6 +8,7 @@ import { AuthUserController } from "./controllers/user/AuthUserController";
 import { CreateCategoryController } from "./controllers/category/CreateCategoryController";
 import { PatchCategoryController } from "./controllers/category/PatchCategoryController";
 import { DeleteCategoryController } from "./controllers/category/DeleteCategoryController";
+import { ListCategoryController } from "./controllers/category/ListCategoryController";
 
 const router = Router();
 
@@ -19,5 +20,6 @@ router.post("/user/auth", new AuthUserController().handle);
 router.post("/category/create", isAuthenticated, new CreateCategoryController().handle);
 router.put("/category/edit", isAuthenticated, new PatchCategoryController().handle);
 router.delete("/category", isAuthenticated, new DeleteCategoryController().handle);
+router.get("/category", isAuthenticated, new ListCategoryController().handle);
 
 export { router };
