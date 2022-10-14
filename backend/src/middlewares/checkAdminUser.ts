@@ -5,7 +5,7 @@ import { UserModel } from "../database/models/UserModel";
 
 export async function checkAdminUser(req: Request, res: Response, next: NextFunction) {
   // Check for admin user?
-  let checkAdmin: boolean = true;
+  let checkAdmin = true;
 
   // User information
   const name = "admin";
