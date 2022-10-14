@@ -16,6 +16,10 @@ export const ItemModel = db.define("item", {
     type: DataTypes.TEXT,
     allowNull: false
   },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   price: {
     type: DataTypes.FLOAT,
     allowNull: false

@@ -20,7 +20,7 @@ router.post("/user/auth", new AuthUserController().handle);
 // CATEGORY ROUTES
 router.post("/admin/category/create", isAuthenticated, new CreateCategoryController().handle);
 router.put("/admin/category/edit", isAuthenticated, new PatchCategoryController().handle);
-router.delete("/admin/category", isAuthenticated, new DeleteCategoryController().handle);
+router.delete("/admin/category/delete", isAuthenticated, new DeleteCategoryController().handle);
 router.get("/category", isAuthenticated, new ListCategoryController().handle);
 router.get("/category/search", isAuthenticated, new GetCategoryController().handle);
 
