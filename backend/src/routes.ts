@@ -9,6 +9,7 @@ import { CreateCategoryController } from "./controllers/category/CreateCategoryC
 import { PatchCategoryController } from "./controllers/category/PatchCategoryController";
 import { DeleteCategoryController } from "./controllers/category/DeleteCategoryController";
 import { ListCategoryController } from "./controllers/category/ListCategoryController";
+import { GetCategoryController } from "./controllers/category/GetCategoryController";
 
 const router = Router();
 
@@ -17,9 +18,10 @@ router.get("/user/auth", checkAdminUser)
 router.post("/user/auth", new AuthUserController().handle);
 
 // CATEGORY ROUTES
-router.post("/category/create", isAuthenticated, new CreateCategoryController().handle);
-router.put("/category/edit", isAuthenticated, new PatchCategoryController().handle);
-router.delete("/category", isAuthenticated, new DeleteCategoryController().handle);
+router.post("/admin/category/create", isAuthenticated, new CreateCategoryController().handle);
+router.put("/admin/category/edit", isAuthenticated, new PatchCategoryController().handle);
+router.delete("/admin/category", isAuthenticated, new DeleteCategoryController().handle);
 router.get("/category", isAuthenticated, new ListCategoryController().handle);
+router.get("/category/search", isAuthenticated, new GetCategoryController().handle);
 
 export { router };
