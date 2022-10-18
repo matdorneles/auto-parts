@@ -12,7 +12,11 @@ import { PatchCategoryController } from "./controllers/category/PatchCategoryCon
 import { DeleteCategoryController } from "./controllers/category/DeleteCategoryController";
 import { ListCategoryController } from "./controllers/category/ListCategoryController";
 import { GetCategoryController } from "./controllers/category/GetCategoryController";
+
 import { CreateItemController } from "./controllers/item/CreateItemController";
+import { ListItemsController } from "./controllers/item/ListItemsController";
+import { GetItemController } from "./controllers/item/GetItemController";
+import { PatchItemController } from "./controllers/item/PatchItemController";
 
 const router = Router();
 
@@ -31,5 +35,8 @@ router.get("/category/search", isAuthenticated, new GetCategoryController().hand
 
 // ITEM ROUTES
 router.post("/admin/item/create", isAuthenticated, upload.single("file"), new CreateItemController().handle);
+router.get("/item", isAuthenticated, new ListItemsController().handle);
+router.get("/item/search", isAuthenticated, new GetItemController().handle)
+router.patch("/item/search", isAuthenticated, new PatchItemController().handle);
 
 export { router };
