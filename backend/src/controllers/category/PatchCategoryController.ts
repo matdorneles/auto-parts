@@ -13,7 +13,7 @@ class PatchCategoryController {
       newName
     });
 
-    return res.json("Sucessfully edited");
+    return res.json(category);
   }
 }
 
