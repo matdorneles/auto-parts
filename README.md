@@ -11,6 +11,7 @@
 - Sequelize ORM
 - Express
 - MySQL Database
+- Automated tests with Cypress
 
 **System information**
 - Upon back-end server start, an admin user will be created to manage your website, you change them to whatever you like
