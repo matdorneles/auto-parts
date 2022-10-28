@@ -9,6 +9,10 @@ class AuthUserController {
 
     const user = await authUserService.execute({ email, password });
 
+    if(user === 'Unauthorized') {
+      return res.status(401).json("User/Password is incorrect")
+    }
+
     return res.status(200).json(user);
   }
 }

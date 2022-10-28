@@ -20,14 +20,14 @@ class AuthUserService {
     });
 
     if(!user) {
-      throw new Error("User/password does not exist")
+      return 'Unauthorized'
     }
 
     // Verify is password matches
     const passwordMatch = await compare(password, user.password);
 
     if(!passwordMatch) {
-      throw new Error("User/password is incorrect")
+      return 'Unauthorized'
     }
 
     // If all is OK, generate new JWT Token for user
