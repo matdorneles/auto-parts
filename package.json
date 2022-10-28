@@ -1,0 +1,14 @@
+{
+  "name": "auto-parts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matdorneles/auto-parts.git",
+  "author": "Matheus Dorneles <matheus.sdorneles1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^10.11.0"
+  }
+}
