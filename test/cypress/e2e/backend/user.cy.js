@@ -18,8 +18,8 @@ describe('user routes testing', () => {
         method: 'POST',
         url: 'http://localhost:3333/user/auth',
         body: {
-          "email": "admin@email.com",
-          "password": "admin123"
+          "email": Cypress.env('email'),
+          "password": Cypress.env('password')
         }
       })
       .should((response) => {
