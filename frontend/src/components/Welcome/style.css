@@ -1,0 +1,18 @@
+.body {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+
+.body-title {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.body-description {
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+}

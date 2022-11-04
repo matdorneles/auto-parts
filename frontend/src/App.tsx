@@ -1,11 +1,15 @@
 import './App.css';
+import Header from './components/Header';
+import Welcome from './components/Welcome';
 
-import Home from "./views/Home";
+import Products from './components/Products';
 
 function App() {
   return (
     <div className='App'>
-      <Home />
+      <Header />
+      <Welcome />
+      <Products />
     </div>
   );
 }

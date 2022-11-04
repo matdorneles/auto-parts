@@ -1,0 +1,94 @@
+.loading {
+  align-items: center;
+  background-color: black;
+  justify-content: center;
+  display: flex;
+  height: 300px;
+}
+
+.loading-text {
+  color: white;
+  font-size: 30px;
+}
+
+.loading-text strong {
+  margin-right: 1rem;
+}
+
+.loading-spinner {
+  height: 25px;
+  width: 25px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  -webkit-animation: rotation .6s infinite linear;
+  -moz-animation: rotation .6s infinite linear;
+  -o-animation: rotation .6s infinite linear;
+  animation: rotation .6s infinite linear;
+  border-left: 4px solid #fff;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  border-top: 4px solid #0F8254;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* TODO Add vendor prefixes if you need them */
+@keyframes rotation { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+.products {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.products-box {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 800px;
+  width: auto;
+}
+
+.products-box_list {
+  align-items: center;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  box-shadow: 5px 5px 7px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1rem;
+  text-align: center;
+  margin-right: 1rem;
+  width: 600px;
+}
+
+.products-box_list_image img {
+  object-fit: contain;
+  display: block;
+  max-width: auto;
+  max-height: 150px;
+}
+
+.products-box_list_item {
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  list-style: none;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.7rem 0;
+  text-align: center;
+}
