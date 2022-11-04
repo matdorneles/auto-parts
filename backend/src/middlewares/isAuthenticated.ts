@@ -10,7 +10,7 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
   const authToken = req.headers.authorization;
 
   if(!authToken) {
-    return res.json(401).end();
+    return res.status(401).end();
   }
 
   const[, token] = authToken.split(" "); // Ignore the writting "Bearer"
