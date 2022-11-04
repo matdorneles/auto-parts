@@ -1,5 +1,25 @@
 header {
-  background-color: #3b3a3a;
-  color: #f6f6f6;
-  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.header-logo {
+  color: #42ea20;
+  padding-right: 7%;
+  text-decoration: none;
+}
+
+.header-item {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.header-item:hover {
+  color: aquamarine;
+  font-size: 23px;
 }
