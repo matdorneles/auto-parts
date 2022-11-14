@@ -1,25 +1,13 @@
 header {
   align-items: center;
   display: flex;
-  justify-content: center;
-  height: 50px;
+  font-size: 24px;
+  justify-content: space-evenly;
+  height: 5vh;
+  width: 100vw;
 }
 
-.header-logo {
-  color: #42ea20;
-  padding-right: 7%;
+.logo {
+  color: #FFFFFF;
   text-decoration: none;
-}
-
-.header-item {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-  padding: 1rem;
-}
-
-.header-item:hover {
-  color: aquamarine;
-  font-size: 23px;
 }

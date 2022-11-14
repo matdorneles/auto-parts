@@ -1,21 +1,21 @@
 import './style.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { faGear } from "@fortawesome/free-solid-svg-icons"
+import { faGear, faBars } from "@fortawesome/free-solid-svg-icons"
+//import { faBars } from "@fortawesome/free-regular-svg-icons";
 
 function Header() {
   const whatsappIcon = <FontAwesomeIcon icon={faWhatsapp} />
   const gearIcon = <FontAwesomeIcon icon={faGear} />
+  const menuIcon = <FontAwesomeIcon icon={faBars} />
 
   return (
     <header>
-      <a href='/' className='header-logo'>
-        <h1>{gearIcon} AutoParts</h1>
+      <i>{menuIcon}</i>
+      <a href='/' className='logo'>
+        <h3><i>{gearIcon}</i> Logo</h3>
       </a>
-      <a href='/' className='header-item'>Home</a>
-      <a href='/products' className='header-item'>Produtos</a>
-      <a href='/contact' className='header-item'>Contato</a>
-      <a href='/whatsapp' className='header-item'>{whatsappIcon}</a>
+      <a href='/whatsapp' className='header-item'><i>{whatsappIcon}</i></a>
     </header>
   );
 }
